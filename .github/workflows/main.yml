@@ -1,9 +1,9 @@
 name: first_demo
 on: [push]
-runs-on: ubuntu-20.04
 jobs:
   first_demo_job:
     name: The first demo job
+    runs-on: ubuntu-20.04	
     steps:
       - name: Show the demo running
         env:
