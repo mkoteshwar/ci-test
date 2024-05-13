@@ -1,0 +1,28 @@
+Exercise 1: Creating Files in ECL
+ Note: Run these from the user screen
+ 1. Creating Permanent Files:
+ The @CAT statement catalogs a file in a master file directory without
+ having it  assigned to the run.
+ To use @CAT as a transparent statement, enter two masterspace (@)
+ characters  instead of one
+ Format :
+ @CAT[,options] filename[,type/reserve/granule/maximum,pack-id-1/...
+ /pack-id-n,,,ACR-name]
+
+ Steps :
+ a. To create and catalog a file named SAMPLE FILE, use:
+ @CAT,P SAMPLEFILE
+ b. To use the transparent statement to create and catalog a file named
+ SAMPLEFILE2, use:
+ @@CAT,P SAMPLEFILE2
+ c. Verify that the files are created using the @PRT command.
+ @PRT SAMPLEFILE.
+ @PRT SAMPLEFILE2.
+
+
+2. List Elements in a  file:
+ Use the @PRT statement with the appropriate options to list all matching
+ elements.
+ Steps:
+ a. To list all symbolic elements in a file named DPS, use:
+ @PRT,TSV SYS$LIB$*DPS(3)./*
